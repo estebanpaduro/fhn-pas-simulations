@@ -1,0 +1,133 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4510,        125]
+NotebookOptionsPosition[      4064,        110]
+NotebookOutlinePosition[      4464,        126]
+CellTagsIndexPosition[      4421,        123]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Interference", " ", "pattern", " ", "for", " ", "two", " ", "high", " ", 
+    "frequency", " ", "waves"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"From", " ", 
+    RowBox[{"article", ":", " ", 
+     RowBox[{
+     "A", " ", "partially", " ", "averaged", " ", "system", " ", "to", " ", 
+      "model", " ", "neuron", " ", "responses", " ", "to", " ", 
+      "interferential", " ", "current", " ", "stimulation"}]}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Cerpa", " ", 
+     RowBox[{"E", "."}]}], ",", " ", 
+    RowBox[{"Courdurier", " ", 
+     RowBox[{"M", "."}]}], ",", " ", 
+    RowBox[{"Hernandez", " ", 
+     RowBox[{"E", "."}]}], ",", " ", 
+    RowBox[{"Medina", " ", 
+     RowBox[{"L", "."}]}], ",", " ", 
+    RowBox[{"Paduro", " ", 
+     RowBox[{"E", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Omega]", "  ", "=", " ", 
+     RowBox[{"2", "Pi", "*", "1"}]}], ";", 
+    RowBox[{"\[Eta]", "=", 
+     RowBox[{"2", "Pi", " ", "*", " ", "0.05"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"g1", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"0.4", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"\[Omega]", " ", "t"}], "]"}]}], "+", 
+          RowBox[{"0.4", 
+           RowBox[{"Cos", "[", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\[Omega]", "+", "\[Eta]"}], ")"}], "t"}], "]"}]}]}], 
+         ",", 
+         RowBox[{"0.8", 
+          RowBox[{"Cos", "[", 
+           RowBox[{
+            RowBox[{"\[Eta]", "/", "2"}], " ", "t"}], "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"-", "0.8"}], 
+          RowBox[{"Cos", "[", 
+           RowBox[{
+            RowBox[{"\[Eta]", "/", "2"}], " ", "t"}], "]"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "60"}], "}"}], ",", 
+       RowBox[{"PlotLegends", "->", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(y\), \(1\)]\)(t)=0.4 Cos[\[Omega] t] + 0.4 \
+Cos[(\[Omega] + \[Eta])t]\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(y\), \(2\)]\)(t)=0.8 Cos[(\[Eta]/2) \
+t]\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(y\), \(3\)]\)(t)=-0.8 Cos[(\[Eta]/2) t]\>\
+\""}], "}"}]}], ",", 
+       RowBox[{"Frame", "->", "True"}], ",", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{"\"\<time [ms]\>\"", ",", "\"\<y(t)\>\""}], "}"}]}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\<interference.png\>\"", ",", "g1"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.861359489748211*^9, 3.861359539058097*^9}, {
+  3.8613597892438574`*^9, 3.861359800299356*^9}, {3.8613599175917625`*^9, 
+  3.861359926050988*^9}, {3.8613601647905235`*^9, 3.861360237829446*^9}, {
+  3.8613610668588605`*^9, 3.8613610859407215`*^9}, {3.8613613162782516`*^9, 
+  3.8613613494298954`*^9}, {3.8613614348114133`*^9, 3.8613616292661486`*^9}, {
+  3.8613616651239314`*^9, 3.8613616788291745`*^9}, {3.861361754579818*^9, 
+  3.8613617764910917`*^9}, {3.8613969221121645`*^9, 3.8613969352631817`*^9}, {
+  3.8617340644319043`*^9, 3.8617342047890553`*^9}, {3.8620519979670987`*^9, 
+  3.862052130809454*^9}},ExpressionUUID->"9828531a-120e-481f-a252-\
+2eabeef0fe65"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", "g1", "]"}]], "Input",ExpressionUUID->"2adef855-0aa2-412b-b2da-8b4edcc93085"]
+},
+WindowSize->{1141.2, 568.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ffc1a234-9aaa-4484-8d98-539a8fc80efe"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3386, 85, 162, "Input",ExpressionUUID->"9828531a-120e-481f-a252-2eabeef0fe65"],
+Cell[3947, 107, 113, 1, 28, "Input",ExpressionUUID->"2adef855-0aa2-412b-b2da-8b4edcc93085"]
+}
+]
+*)
+
