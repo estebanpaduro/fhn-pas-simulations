@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 # %%
 fig, ax = plt.subplots()
-x= pd.read_csv("simulation_low_frequency.csv", sep=",",names=["amplitude","freq","spikerate"],header=0)
+x= pd.read_csv("data_fig5.csv", sep=",",names=["amplitude","freq","spikerate"],header=0)
 df = x[["amplitude","freq","spikerate"]]
 df = df.groupby(['amplitude','freq']).sum()
 df = df.reset_index()
@@ -39,4 +39,4 @@ cbar = fig.colorbar(
     values=(level_boundaries[:-1] + level_boundaries[1:]) / 2,
 )
 cbar.set_label('Spike rate [spikes/s]', rotation=270, labelpad=15)
-plt.savefig('lowfreq.png')
+plt.savefig('Fig5.png')

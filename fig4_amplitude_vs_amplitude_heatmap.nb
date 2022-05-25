@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23505,        454]
-NotebookOptionsPosition[     22972,        437]
-NotebookOutlinePosition[     23453,        455]
-CellTagsIndexPosition[     23410,        452]
+NotebookDataLength[     23663,        456]
+NotebookOptionsPosition[     23130,        439]
+NotebookOutlinePosition[     23611,        457]
+CellTagsIndexPosition[     23568,        454]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -55,9 +55,7 @@ Cell[BoxData[
      "headers", ",", "extract"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{"Begin", " ", "simulation"}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"simulation", "=", 
-     RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"ep", "=", "0.08"}], ";", 
     RowBox[{"\[Gamma]", "=", "0.5"}], ";", 
@@ -65,9 +63,11 @@ Cell[BoxData[
    RowBox[{"Do", "[", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{
+      RowBox[{"simulation", "=", 
+       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"filename", "=", 
        RowBox[{"StringJoin", "[", 
-        RowBox[{"\"\<simulation_square_\>\"", ",", 
+        RowBox[{"\"\<data_fig4_\>\"", ",", 
          RowBox[{"ToString", "[", "freq", "]"}], ",", "\"\<hz.csv\>\""}], 
         "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"\[Eta]", "=", 
@@ -361,8 +361,10 @@ Cell[BoxData[
    3.8620531966402035`*^9}, {3.862053278587183*^9, 3.8620532954076014`*^9}, {
    3.862053415420931*^9, 3.8620534187824025`*^9}, {3.8620546860606833`*^9, 
    3.8620546895768538`*^9}, {3.862054722715335*^9, 3.862054848559208*^9}, 
-   3.862054884090828*^9, {3.8620550066362705`*^9, 
-   3.8620550098385954`*^9}},ExpressionUUID->"ed15d148-733c-4386-9344-\
+   3.862054884090828*^9, {3.8620550066362705`*^9, 3.8620550098385954`*^9}, {
+   3.8624330921754785`*^9, 3.86243309436837*^9}, {3.8624343862646737`*^9, 
+   3.862434386428875*^9}, {3.862434423830224*^9, 
+   3.862434431860384*^9}},ExpressionUUID->"ed15d148-733c-4386-9344-\
 7eadc13d9f93"],
 
 Cell[BoxData[
@@ -454,8 +456,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 19141, 345, 702, "Input",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
-Cell[19702, 367, 3266, 68, 115, "Input",ExpressionUUID->"cb55f92b-0108-47d1-b608-f2e5ed016aa2"]
+Cell[558, 20, 19299, 347, 723, "Input",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
+Cell[19860, 369, 3266, 68, 115, "Input",ExpressionUUID->"cb55f92b-0108-47d1-b608-f2e5ed016aa2"]
 }
 ]
 *)

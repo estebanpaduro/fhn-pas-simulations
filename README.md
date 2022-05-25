@@ -20,7 +20,8 @@ The scripts are organized in the following folders:
 
 ## References
 
-[1] Cerpa E., Courdurier M., Hernandez E., Medina L., Paduro E. (2022) A partially averaged system to model neuron responses to interferential current stimulation
+[1] Cerpa E., Courdurier M., Hernandez E., Medina L., Paduro E. (2022) A partially averaged system to model neuron responses to interferential current stimulation.
+Preprint available at https://www.biorxiv.org/content/10.1101/2022.05.23.493095v1
 
 ## License
 

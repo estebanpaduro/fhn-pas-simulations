@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     21751,        429]
-NotebookOptionsPosition[     21249,        413]
-NotebookOutlinePosition[     21700,        430]
-CellTagsIndexPosition[     21657,        427]
+NotebookDataLength[     21804,        429]
+NotebookOptionsPosition[     21302,        413]
+NotebookOutlinePosition[     21753,        430]
+CellTagsIndexPosition[     21710,        427]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -59,7 +59,7 @@ Cell[BoxData[
     RowBox[{"simulation", "=", 
      RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"filename", "=", "\"\<simulation_low_frequency.csv\>\""}], ";"}], 
+    RowBox[{"filename", "=", "\"\<data_fig5.csv\>\""}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{"Do", "[", 
     RowBox[{
@@ -344,8 +344,8 @@ Cell[BoxData[
    3.8618114109766145`*^9}, 3.861825863313692*^9, {3.8620535040256643`*^9, 
    3.862053504452704*^9}, {3.862054229969372*^9, 3.8620542390757065`*^9}, {
    3.8620543097846346`*^9, 3.862054381059415*^9}, {3.862054485358492*^9, 
-   3.8620545897195873`*^9}},ExpressionUUID->"ed15d148-733c-4386-9344-\
-7eadc13d9f93"],
+   3.8620545897195873`*^9}, {3.86243316996832*^9, 3.8624331723674974`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
 
 Cell[BoxData[
  RowBox[{
@@ -429,8 +429,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 17958, 327, 593, "Input",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
-Cell[18519, 349, 2726, 62, 95, "Input",ExpressionUUID->"cb55f92b-0108-47d1-b608-f2e5ed016aa2"]
+Cell[558, 20, 18011, 327, 593, "Input",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
+Cell[18572, 349, 2726, 62, 95, "Input",ExpressionUUID->"cb55f92b-0108-47d1-b608-f2e5ed016aa2"]
 }
 ]
 *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12294,        334]
-NotebookOptionsPosition[     11844,        319]
-NotebookOutlinePosition[     12244,        335]
-CellTagsIndexPosition[     12201,        332]
+NotebookDataLength[     12349,        335]
+NotebookOptionsPosition[     11899,        320]
+NotebookOutlinePosition[     12299,        336]
+CellTagsIndexPosition[     12256,        333]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -307,14 +307,15 @@ Sin(\!\(\*SubscriptBox[\(\[Omega]\), \(2\)]\)t)\>\"", ",",
 
 Cell[BoxData[{
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<PAS1.png\>\"", ",", "g1"}], "]"}], "\[IndentingNewLine]", 
+  RowBox[{"\"\<Fig3a.png\>\"", ",", "g1"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<PAS2.png\>\"", ",", "g2"}], "]"}], "\[IndentingNewLine]", 
+  RowBox[{"\"\<Fig3b.png\>\"", ",", "g2"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<PAS3.png\>\"", ",", "g3"}], 
+  RowBox[{"\"\<Fig3c.png\>\"", ",", "g3"}], 
   "]"}], "\[IndentingNewLine]"}], "Input",
- CellChangeTimes->{3.8617274450356607`*^9, 
-  3.8620524288219604`*^9},ExpressionUUID->"af4431f4-ee04-49e9-b9d3-\
+ CellChangeTimes->{
+  3.8617274450356607`*^9, 3.8620524288219604`*^9, {3.8624330101402645`*^9, 
+   3.862433022168212*^9}},ExpressionUUID->"af4431f4-ee04-49e9-b9d3-\
 943fc83707e6"]
 },
 WindowSize->{1141.2, 568.8},
@@ -335,7 +336,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 10827, 285, 581, "Input",ExpressionUUID->"95b4f973-8360-4a88-8783-32210ad3fd04"],
-Cell[11388, 307, 452, 10, 86, "Input",ExpressionUUID->"af4431f4-ee04-49e9-b9d3-943fc83707e6"]
+Cell[11388, 307, 507, 11, 86, "Input",ExpressionUUID->"af4431f4-ee04-49e9-b9d3-943fc83707e6"]
 }
 ]
 *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7781,        231]
-NotebookOptionsPosition[      7334,        216]
-NotebookOutlinePosition[      7734,        232]
-CellTagsIndexPosition[      7691,        229]
+NotebookDataLength[      7828,        232]
+NotebookOptionsPosition[      7381,        217]
+NotebookOutlinePosition[      7781,        233]
+CellTagsIndexPosition[      7738,        230]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -209,9 +209,10 @@ c13a0e9c57f0"],
 
 Cell[BoxData[
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<separatrix.png\>\"", ",", "g4"}], "]"}]], "Input",
- CellChangeTimes->{{3.8620522009676943`*^9, 
-  3.862052210167288*^9}},ExpressionUUID->"4a053796-20eb-422f-8c12-\
+  RowBox[{"\"\<Fig2.png\>\"", ",", "g4"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8620522009676943`*^9, 3.862052210167288*^9}, {
+  3.8624329769605026`*^9, 
+  3.8624329781273546`*^9}},ExpressionUUID->"4a053796-20eb-422f-8c12-\
 502c7967fe04"]
 },
 WindowSize->{1141.2, 568.8},
@@ -232,7 +233,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 6537, 187, 241, "Input",ExpressionUUID->"47c18810-2469-47bd-9c15-c13a0e9c57f0"],
-Cell[7098, 209, 232, 5, 28, "Input",ExpressionUUID->"4a053796-20eb-422f-8c12-502c7967fe04"]
+Cell[7098, 209, 279, 6, 28, "Input",ExpressionUUID->"4a053796-20eb-422f-8c12-502c7967fe04"]
 }
 ]
 *)
