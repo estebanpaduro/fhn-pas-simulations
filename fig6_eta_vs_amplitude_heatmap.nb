@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     21804,        429]
-NotebookOptionsPosition[     21302,        413]
-NotebookOutlinePosition[     21753,        430]
-CellTagsIndexPosition[     21710,        427]
+NotebookDataLength[     22739,        453]
+NotebookOptionsPosition[     22256,        437]
+NotebookOutlinePosition[     22688,        454]
+CellTagsIndexPosition[     22645,        451]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -59,7 +59,7 @@ Cell[BoxData[
     RowBox[{"simulation", "=", 
      RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"filename", "=", "\"\<data_fig5.csv\>\""}], ";"}], 
+    RowBox[{"filename", "=", "\"\<data_fig6.csv\>\""}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{"Do", "[", 
     RowBox[{
@@ -165,8 +165,31 @@ Cell[BoxData[
               RowBox[{"t", ",", "0", ",", "maxtime", ",", "1"}], "}"}]}], 
             "]"}], ",", "0", ",", "0", ",", "1"}], "]"}]}], ";", 
         "\[IndentingNewLine]", 
-        RowBox[{"count", "=", 
-         RowBox[{"Length", "[", "peaks", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", "peaks", "]"}], ">", "0"}], ",", 
+          RowBox[{"count", "=", 
+           RowBox[{
+            RowBox[{"Total", "[", 
+             RowBox[{"Map", "[", 
+              RowBox[{
+               RowBox[{"Function", "[", 
+                RowBox[{"Boole", "[", 
+                 RowBox[{"#", ">=", "5"}], "]"}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"peaks", "[", 
+                 RowBox[{"[", 
+                  RowBox[{
+                   RowBox[{"2", ";;", 
+                    RowBox[{"-", "1"}]}], ",", "1"}], "]"}], "]"}], "-", 
+                RowBox[{"peaks", "[", 
+                 RowBox[{"[", 
+                  RowBox[{
+                   RowBox[{"1", ";;", 
+                    RowBox[{"-", "2"}]}], ",", "1"}], "]"}], "]"}]}]}], "]"}],
+              "]"}], "+", "1"}]}], ",", 
+          RowBox[{"count", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
         RowBox[{"point", " ", "=", " ", 
          RowBox[{"{", 
           RowBox[{"amplitude", ",", "freq", ",", 
@@ -344,7 +367,8 @@ Cell[BoxData[
    3.8618114109766145`*^9}, 3.861825863313692*^9, {3.8620535040256643`*^9, 
    3.862053504452704*^9}, {3.862054229969372*^9, 3.8620542390757065`*^9}, {
    3.8620543097846346`*^9, 3.862054381059415*^9}, {3.862054485358492*^9, 
-   3.8620545897195873`*^9}, {3.86243316996832*^9, 3.8624331723674974`*^9}},
+   3.8620545897195873`*^9}, {3.86243316996832*^9, 3.8624331723674974`*^9}, {
+   3.8772787762390285`*^9, 3.877278776821717*^9}, 3.8772788553092175`*^9},
  CellLabel->"In[1]:=",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
 
 Cell[BoxData[
@@ -411,10 +435,10 @@ Cell[BoxData[
    3.862054581538452*^9},ExpressionUUID->"cb55f92b-0108-47d1-b608-\
 f2e5ed016aa2"]
 },
-WindowSize->{1141.2, 568.8},
-WindowMargins->{{-2.4, Automatic}, {Automatic, 3.5999999999999996`}},
+WindowSize->{890.4, 522.9},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 Magnification:>0.9 Inherited,
-FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"efc95f3c-a8db-47be-b306-a974c92e9918"
 ]
@@ -429,8 +453,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 18011, 327, 593, "Input",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
-Cell[18572, 349, 2726, 62, 95, "Input",ExpressionUUID->"cb55f92b-0108-47d1-b608-f2e5ed016aa2"]
+Cell[558, 20, 18965, 351, 610, "Input",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
+Cell[19526, 373, 2726, 62, 95, "Input",ExpressionUUID->"cb55f92b-0108-47d1-b608-f2e5ed016aa2"]
 }
 ]
 *)

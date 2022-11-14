@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # %%
 for frequency in ["10","50","80","120"]:
     fig, ax = plt.subplots()
-    x= pd.read_csv("data_fig4_"+frequency+"hz.csv", sep=",",header=0,names=["A","B","freq","spikerate"])
+    x= pd.read_csv("data_fig4_3khz_"+frequency+"hz.csv", sep=",",header=0,names=["A","B","freq","spikerate"])
     df = x[["A","B","spikerate"]]
     df = df.groupby(['A','B']).sum()
     df = df.reset_index()
@@ -21,9 +21,9 @@ for frequency in ["10","50","80","120"]:
     Xi,Yi = np.meshgrid(X, Y)
     
     vmin = 0
-    vmax = 28
+    vmax = 31
     levels = vmax - vmin+1
-    level_boundaries = np.linspace(vmin, vmax, levels+ 1)
+    level_boundaries = np.linspace(vmin, vmax, levels)-0.5
     
     from matplotlib.cm import ScalarMappable
     graf1 = ax.contourf(Yi, Xi, Z, 
@@ -41,4 +41,4 @@ for frequency in ["10","50","80","120"]:
     )
     cbar.set_label('Spike rate [spikes/s]', rotation=270, labelpad=15)
     
-    plt.savefig('Fig4_'+frequency+'hz.png')
+    plt.savefig('Fig4_3khz_'+frequency+'hz.png')
