@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23663,        456]
-NotebookOptionsPosition[     23130,        439]
-NotebookOutlinePosition[     23611,        457]
-CellTagsIndexPosition[     23568,        454]
+NotebookDataLength[     26958,        519]
+NotebookOptionsPosition[     26390,        501]
+NotebookOutlinePosition[     26907,        520]
+CellTagsIndexPosition[     26864,        517]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -48,18 +48,20 @@ Cell[BoxData[
   RowBox[{
    RowBox[{"Clear", "[", 
     RowBox[{
-    "simulation", ",", "ep", ",", "\[Gamma]", ",", "\[Beta]", ",", "freq", 
-     ",", "filename", ",", "\[Eta]", ",", "maxtime", ",", "eql", ",", "v", 
-     ",", "w", ",", "v0", ",", "w0", ",", "Va", ",", "Wa", ",", "t", ",", 
-     "peaks", ",", " ", "count", ",", " ", "point", ",", "data", ",", 
-     "headers", ",", "extract"}], "]"}], "\[IndentingNewLine]", 
+    "simulation", ",", "ep", ",", "\[Gamma]", ",", "\[Beta]", ",", "f", ",", 
+     "\[Omega]", ",", "freq", ",", "filename", ",", "\[Eta]", ",", "maxtime", 
+     ",", "eql", ",", "v", ",", "w", ",", "v0", ",", "w0", ",", "Va", ",", 
+     "Wa", ",", "t", ",", "peaks", ",", " ", "count", ",", " ", "point", ",", 
+     "data", ",", "headers", ",", "extract"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{"Begin", " ", "simulation"}], "*)"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"ep", "=", "0.08"}], ";", 
     RowBox[{"\[Gamma]", "=", "0.5"}], ";", 
-    RowBox[{"\[Beta]", "=", "0.8"}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"\[Beta]", "=", "0.8"}], ";", " ", 
+    RowBox[{"f", " ", "=", " ", "3"}], ";", " ", 
+    RowBox[{"\[Omega]", "=", 
+     RowBox[{"2", "Pi", "*", "f"}]}], ";"}], "\[IndentingNewLine]", 
    RowBox[{"Do", "[", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{
@@ -68,6 +70,7 @@ Cell[BoxData[
       RowBox[{"filename", "=", 
        RowBox[{"StringJoin", "[", 
         RowBox[{"\"\<data_fig4_\>\"", ",", 
+         RowBox[{"ToString", "[", "f", "]"}], ",", "\"\<khz_\>\"", ",", 
          RowBox[{"ToString", "[", "freq", "]"}], ",", "\"\<hz.csv\>\""}], 
         "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"\[Eta]", "=", 
@@ -123,22 +126,22 @@ Cell[BoxData[
                  RowBox[{
                   RowBox[{"v", "'"}], "[", "t", "]"}], "\[Equal]", 
                  RowBox[{
-                  RowBox[{
-                   RowBox[{"(", 
-                    RowBox[{"1", "-", 
-                    RowBox[{
-                    RowBox[{"A", "^", "2"}], "/", "2"}], "-", 
-                    RowBox[{
-                    RowBox[{"B", "^", "2"}], "/", "2"}], "-", 
-                    RowBox[{"A", " ", "B", " ", 
-                    RowBox[{"Cos", "[", 
-                    RowBox[{"\[Eta]", " ", "t"}], "]"}]}]}], ")"}], 
-                   RowBox[{"v", "[", "t", "]"}]}], "-", 
+                  RowBox[{"v", "[", "t", "]"}], "-", 
                   RowBox[{
                    RowBox[{
                     RowBox[{"v", "[", "t", "]"}], "^", "3"}], "/", "3"}], "-", 
-                  RowBox[{"w", "[", "t", "]"}]}]}], " ", ",", 
-                "\[IndentingNewLine]", 
+                  RowBox[{"w", "[", "t", "]"}], "+", 
+                  RowBox[{"A", " ", "\[Omega]", " ", 
+                   RowBox[{"Cos", "[", 
+                    RowBox[{"\[Omega]", " ", "t"}], "]"}]}], "+", 
+                  RowBox[{"B", " ", 
+                   RowBox[{"(", 
+                    RowBox[{"\[Omega]", "+", "\[Eta]"}], ")"}], " ", 
+                   RowBox[{"Cos", "[", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\[Omega]", " ", "+", " ", "\[Eta]"}], ")"}], 
+                    "t"}], "]"}]}]}]}], " ", ",", "\[IndentingNewLine]", 
                 RowBox[{
                  RowBox[{
                   RowBox[{"w", "'"}], "[", "t", "]"}], "==", 
@@ -164,13 +167,57 @@ Cell[BoxData[
              RowBox[{
               RowBox[{"Table", "[", 
                RowBox[{
-                RowBox[{"Va", "[", "t", "]"}], ",", 
+                RowBox[{
+                 RowBox[{"Va", "[", "t", "]"}], "-", 
+                 RowBox[{"A", "  ", 
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"\[Omega]", " ", "t"}], "]"}]}], "-", 
+                 RowBox[{"B", " ", 
+                  RowBox[{"Sin", "[", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"\[Omega]", " ", "+", " ", "\[Eta]"}], ")"}], 
+                    "t"}], "]"}]}]}], ",", 
                 RowBox[{"{", 
                  RowBox[{"t", ",", "0", ",", "maxtime", ",", "1"}], "}"}]}], 
-               "]"}], ",", "0", ",", "0", ",", 
-              RowBox[{"2", "/", "3"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-           RowBox[{"count", "=", 
-            RowBox[{"Length", "[", "peaks", "]"}]}], ";", 
+               "]"}], ",", "0", ",", "0", ",", "1"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+            "To", " ", "avoid", " ", "multiple", " ", "counting", " ", 
+             "local", " ", "maxima", " ", "we", " ", "filter", " ", "peaks", 
+             " ", "that", " ", "are", " ", "less", " ", "than", " ", 
+             RowBox[{"5", "[", "ms", "]"}], " ", "away"}], "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Length", "[", "peaks", "]"}], ">", "0"}], ",", 
+             RowBox[{"count", "=", 
+              RowBox[{
+               RowBox[{"Total", "[", 
+                RowBox[{"Map", "[", 
+                 RowBox[{
+                  RowBox[{"Function", "[", 
+                   RowBox[{"Boole", "[", 
+                    RowBox[{"#", ">=", "5"}], "]"}], "]"}], ",", 
+                  RowBox[{
+                   RowBox[{"peaks", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"2", ";;", 
+                    RowBox[{"-", "1"}]}], ",", "1"}], "]"}], "]"}], "-", 
+                   RowBox[{"peaks", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"1", ";;", 
+                    RowBox[{"-", "2"}]}], ",", "1"}], "]"}], "]"}]}]}], "]"}],
+                 "]"}], "+", "1"}]}], ",", 
+             RowBox[{"count", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"count", "=", 
+              RowBox[{"Length", "[", "peaks", "]"}]}], ";"}], "*)"}], 
            "\[IndentingNewLine]", 
            RowBox[{"point", " ", "=", " ", 
             RowBox[{"{", 
@@ -363,8 +410,23 @@ Cell[BoxData[
    3.8620546895768538`*^9}, {3.862054722715335*^9, 3.862054848559208*^9}, 
    3.862054884090828*^9, {3.8620550066362705`*^9, 3.8620550098385954`*^9}, {
    3.8624330921754785`*^9, 3.86243309436837*^9}, {3.8624343862646737`*^9, 
-   3.862434386428875*^9}, {3.862434423830224*^9, 
-   3.862434431860384*^9}},ExpressionUUID->"ed15d148-733c-4386-9344-\
+   3.862434386428875*^9}, {3.862434423830224*^9, 3.862434431860384*^9}, 
+   3.8769828545071487`*^9, {3.876986316317315*^9, 3.8769864201748667`*^9}, {
+   3.8769864676052694`*^9, 3.8769864766430745`*^9}, {3.876986511306009*^9, 
+   3.8769865553909593`*^9}, 3.8769865965422106`*^9, {3.8772027877477427`*^9, 
+   3.8772027955768313`*^9}, {3.8772029343071175`*^9, 3.877203016831918*^9}, {
+   3.8772083064164724`*^9, 3.8772083086192865`*^9}, {3.8772136621130533`*^9, 
+   3.877213666000696*^9}, {3.877213698710637*^9, 3.877213794858204*^9}, {
+   3.877213922610983*^9, 3.877213987031715*^9}, {3.877251895101674*^9, 
+   3.877251895988115*^9}, {3.877255097562148*^9, 3.877255097786316*^9}, {
+   3.8772572617372694`*^9, 3.8772573343408246`*^9}, {3.8772573717042494`*^9, 
+   3.8772573720974884`*^9}, {3.877257587190124*^9, 3.8772575918602858`*^9}, {
+   3.877257658052984*^9, 3.8772576627779303`*^9}, {3.877271046591895*^9, 
+   3.877271057814778*^9}, {3.8772736284745193`*^9, 3.8772736321765137`*^9}, {
+   3.8773774496887255`*^9, 3.8773774702975817`*^9}, {3.8773775032220974`*^9, 
+   3.877377505772208*^9}, {3.877377545337042*^9, 3.877377546592335*^9}, {
+   3.877377578067706*^9, 
+   3.877377580047031*^9}},ExpressionUUID->"ed15d148-733c-4386-9344-\
 7eadc13d9f93"],
 
 Cell[BoxData[
@@ -437,13 +499,14 @@ Cell[BoxData[
    3.862053054929042*^9}, {3.862054575102573*^9, 3.862054577284746*^9}},
  CellLabel->"In[7]:=",ExpressionUUID->"cb55f92b-0108-47d1-b608-f2e5ed016aa2"]
 },
-WindowSize->{1141.2, 568.8},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1152., 579.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
 TaggingRules->Association["TryRealOnly" -> False],
-Magnification:>1.1 Inherited,
+Magnification:>0.9 Inherited,
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"4174d29f-7282-4c17-90e3-b387d57b1530"
+ExpressionUUID->"d9808782-83c2-4a79-8b37-8bc0a6f430de"
 ]
 (* End of Notebook Content *)
 
@@ -456,8 +519,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 19299, 347, 723, "Input",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
-Cell[19860, 369, 3266, 68, 115, "Input",ExpressionUUID->"cb55f92b-0108-47d1-b608-f2e5ed016aa2"]
+Cell[558, 20, 22559, 409, 610, "Input",ExpressionUUID->"ed15d148-733c-4386-9344-7eadc13d9f93"],
+Cell[23120, 431, 3266, 68, 95, "Input",ExpressionUUID->"cb55f92b-0108-47d1-b608-f2e5ed016aa2"]
 }
 ]
 *)
